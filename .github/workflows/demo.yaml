@@ -5,7 +5,7 @@ on:
     branches:
     - test
 jobs:
-  test_job
+  test_job:
     runs-on: ubuntu-latest
     defaults:
       run:
