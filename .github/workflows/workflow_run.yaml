@@ -1,0 +1,16 @@
+name: GitHubActionsDemoWorkflow
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  workflow_run:
+    workflows: [GitHubActionsDemo]
+    types:
+      - completed
+jobs:
+  generate_terraform1:
+    runs-on: ubuntu-latest
+    environment: terraform_provider
+    container: openjdk:23-bullseye
+    steps:
+      - name: Test action 
+        run: |
+          echo "This is test run"
