@@ -1,0 +1,16 @@
+name: GitHubActionsDemo
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on: 
+  push:
+    branches:
+    - test
+jobs:
+  test_job
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+    container: openjdk:23-bullseye
+    steps:
+    - name: Check out repository code
+      uses: actions/checkout@v4
